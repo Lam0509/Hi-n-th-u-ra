@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị đầu ra</title>
+</head>
+<body>
+<p id="text"></p>
+<p id="info2"></p>
+<button type="button" onclick="showMessage()">Click me</button>
+<button type="button" onclick="showText()">Show text</button>
+<button type="button" onclick="showDocument()">Show document</button>
+<button id="info1" type="button" onclick="showInfo()">Show Info</button>
+</body>
+<script>
+    function showMessage() {
+        alert("Xin chào mọi người")
+    }
+
+    function showText() {
+        document.getElementById("text").innerHTML = "Xin chào mọi người"
+    }
+
+    function showDocument() {
+        document.write("Hello everybody");
+        console.log("Hello everybody")
+    }
+
+    let Info = document.getElementById("info1");
+    Info.addEventListener("showInfo", showInfo);
+    function showInfo() {
+        document.getElementById("info2").innerHTML = "Trần Quang Lâm"
+    }
+</script>
+</html>
